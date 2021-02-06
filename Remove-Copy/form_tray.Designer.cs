@@ -73,6 +73,7 @@ namespace Remove_Copy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 135);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_tray";
             this.Text = "Remove Copyright";
             this.Load += new System.EventHandler(this.Form1_Load);
