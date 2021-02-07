@@ -25,7 +25,7 @@ namespace Remove_Copy
             notifyIcon1.ShowBalloonTip(1000);
         }
 
-        private void 종료ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stripMenu_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -40,16 +40,49 @@ namespace Remove_Copy
             notifyIcon1.ContextMenuStrip = contextMenuStrip1;
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void stripMenu_Settings_Click(object sender, EventArgs e)
         {
             form_settings fs = new form_settings();
-            fs.ShowDialog();
+            if (isOpen(fs.Name))
+            {
+                if(fs.ShowDialog() == DialogResult.OK)
+                {
+                    nowPettern();
+                }
+            }
+        }
+        void nowPettern()
+        {
+            string pettern = Properties.Settings.Default.pettern;
+            notifyIcon1.BalloonTipTitle = "적용된 패턴";
+            notifyIcon1.BalloonTipText = pettern;
+            notifyIcon1.ShowBalloonTip(1000);
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             form_settings fs = new form_settings();
-            fs.ShowDialog();
+            if (isOpen(fs.Name))
+            {
+                if (fs.ShowDialog() == DialogResult.OK)
+                {
+                    nowPettern();
+                }
+            }
+        }
+        public bool isOpen(string name)
+        {
+            foreach(Form form in Application.OpenForms)
+            {
+                if(form.Name == name)
+                {
+                    if (form.WindowState == FormWindowState.Minimized)
+                        form.WindowState = FormWindowState.Normal;
+                    form.Activate();
+                    return false;
+                }
+            }
+            return true;
         }
     }
 

@@ -33,8 +33,8 @@ namespace Remove_Copy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_tray));
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenu_settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.stripMenu_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,24 +48,24 @@ namespace Remove_Copy
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.종료ToolStripMenuItem});
+            this.stripMenu_settings,
+            this.stripMenu_Exit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(99, 48);
             // 
-            // toolStripMenuItem1
+            // stripMenu_settings
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
-            this.toolStripMenuItem1.Text = "설정";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.stripMenu_settings.Name = "stripMenu_settings";
+            this.stripMenu_settings.Size = new System.Drawing.Size(98, 22);
+            this.stripMenu_settings.Text = "설정";
+            this.stripMenu_settings.Click += new System.EventHandler(this.stripMenu_Settings_Click);
             // 
-            // 종료ToolStripMenuItem
+            // stripMenu_Exit
             // 
-            this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.종료ToolStripMenuItem.Text = "종료";
-            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
+            this.stripMenu_Exit.Name = "stripMenu_Exit";
+            this.stripMenu_Exit.Size = new System.Drawing.Size(98, 22);
+            this.stripMenu_Exit.Text = "종료";
+            this.stripMenu_Exit.Click += new System.EventHandler(this.stripMenu_Exit_Click);
             // 
             // form_tray
             // 
@@ -85,8 +85,8 @@ namespace Remove_Copy
         #endregion
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem stripMenu_Exit;
+        private System.Windows.Forms.ToolStripMenuItem stripMenu_settings;
     }
 }
 

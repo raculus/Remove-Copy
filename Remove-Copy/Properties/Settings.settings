@@ -5,8 +5,11 @@
     <Setting Name="pettern" Type="System.String" Scope="User">
       <Value Profile="(Default)">출처: .+\[.+\]</Value>
     </Setting>
-    <Setting Name="default_pettern" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">출처: .+\[.+\]</Value>
+    <Setting Name="backup_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://gist.github.com/raculus/9c56f85dfe58bda97b5c93df709e8daa/raw</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

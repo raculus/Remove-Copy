@@ -32,8 +32,8 @@ namespace Remove_Copy
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_settings));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.button_Save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -54,33 +54,33 @@ namespace Remove_Copy
             this.label1.TabIndex = 1;
             this.label1.Text = "정규식 패턴";
             // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Location = new System.Drawing.Point(0, 115);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(246, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "창을 닫으면 저장됩니다";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(101, 69);
+            this.button1.Location = new System.Drawing.Point(240, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 32);
             this.button1.TabIndex = 3;
-            this.button1.Text = "기본값 불러오기";
+            this.button1.Text = "웹에서 불러오기";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button_Save
+            // 
+            this.button_Save.Location = new System.Drawing.Point(297, 110);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 30);
+            this.button_Save.TabIndex = 4;
+            this.button_Save.Text = "저장";
+            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // form_settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 135);
+            this.ClientSize = new System.Drawing.Size(391, 152);
+            this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Malgun Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -93,6 +93,7 @@ namespace Remove_Copy
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "설정";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_settings_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.form_settings_FormClosed);
             this.Load += new System.EventHandler(this.form_settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,7 +104,7 @@ namespace Remove_Copy
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Save;
     }
 }

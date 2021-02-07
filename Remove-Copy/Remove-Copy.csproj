@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="form_get_from_url.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_get_from_url.Designer.cs">
+      <DependentUpon>form_get_from_url.cs</DependentUpon>
+    </Compile>
     <Compile Include="form_settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form_get_from_url.resx">
+      <DependentUpon>form_get_from_url.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form_settings.resx">
       <DependentUpon>form_settings.cs</DependentUpon>
     </EmbeddedResource>

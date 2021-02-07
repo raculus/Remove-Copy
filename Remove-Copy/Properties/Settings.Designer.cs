@@ -35,12 +35,27 @@ namespace Remove_Copy.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("출처: .+\\[.+\\]")]
-        public string default_pettern {
+        [global::System.Configuration.DefaultSettingValueAttribute("https://gist.github.com/raculus/9c56f85dfe58bda97b5c93df709e8daa/raw")]
+        public string backup_url {
             get {
-                return ((string)(this["default_pettern"]));
+                return ((string)(this["backup_url"]));
+            }
+            set {
+                this["backup_url"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Setting {
+            get {
+                return ((string)(this["Setting"]));
+            }
+            set {
+                this["Setting"] = value;
             }
         }
     }
