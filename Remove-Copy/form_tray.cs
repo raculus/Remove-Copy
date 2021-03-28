@@ -38,6 +38,8 @@ namespace Remove_Copy
             this.notifyIcon1.Visible = true;
             notifyIcon1.Icon = Properties.Resources.icon;
             notifyIcon1.ContextMenuStrip = contextMenuStrip1;
+
+            nowPettern();
         }
 
         private void stripMenu_Settings_Click(object sender, EventArgs e)
@@ -151,9 +153,13 @@ namespace Remove_Copy
         }
         private string removeCopyright(string txt)
         {            
-            string pettern = Properties.Settings.Default.pettern;
-            Regex r = new Regex(pettern, RegexOptions.RightToLeft);
-            txt = r.Replace(txt, "", 1);
+            var petterns = Properties.Settings.Default.pettern.Split('\n');
+            foreach(var p in petterns)
+            {
+                Regex r = new Regex(p, RegexOptions.RightToLeft);
+                txt = r.Replace(txt, "", 1);
+                
+            }
             return txt;
         }
     }

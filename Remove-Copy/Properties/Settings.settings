@@ -6,10 +6,7 @@
       <Value Profile="(Default)">출처: .+\[.+\]</Value>
     </Setting>
     <Setting Name="backup_url" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://gist.github.com/raculus/9c56f85dfe58bda97b5c93df709e8daa/raw</Value>
-    </Setting>
-    <Setting Name="Setting" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">https://gist.github.com/raculus/9c56f85dfe58bda97b5c93df709e8daa/raw/</Value>
     </Setting>
   </Settings>
 </SettingsFile>
